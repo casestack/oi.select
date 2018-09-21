@@ -205,7 +205,7 @@ angular.module('oi.select')
 
                     //length less then minlength
                     if (String(inputValue).length < options.minlength) return;
-                    
+
                     //We don't get matches if nothing added into matches list
                     if (inputValue !== oldValue && (!scope.oldQuery || inputValue) && !matchesWereReset) {
                         listElement[0].scrollTop = 0;
@@ -473,7 +473,7 @@ angular.module('oi.select')
                 function click(event) {
                     //query length less then minlength
                     if (scope.query.length < options.minlength) return;
-                    
+
                     //option is disabled
                     if (oiUtils.contains(element[0], event.target, 'disabled')) return;
 
@@ -485,8 +485,11 @@ angular.module('oi.select')
                     }
 
                     if (scope.isOpen && options.closeList && (event.target.nodeName !== 'INPUT' || !scope.query.length)) { //do not reset if you are editing the query
-                        resetMatches({query: options.editItem && !editItemIsCorrected});
-                        scope.$evalAsync();
+                        scope.$evalAsync(function() {
+                            $timeout(function() {
+                                resetMatches({query: options.editItem && !editItemIsCorrected});
+                            });
+                        });
                     } else {
                         getMatches(scope.query);
                     }
