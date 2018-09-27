@@ -4,7 +4,7 @@
     "version": "0.2.22",
     "repository": {
         "type": "git",
-        "url": "git://github.com/casestack/oi.select.git"
+        "url": "git://github.com/supplypike/oi.select.git"
     },
     "devDependencies": {
         "gulp": "3.9.1",
