@@ -1,3 +1,9 @@
+## 0.2.23
+
+#### Bug Fixes
+
+- **oi-select** set input autocomplete attribute to 'new-password' because 'off' is not working in chrome anymore
+
 ## 0.2.21
 
 #### Features
@@ -39,13 +45,13 @@
 #### Bug Fixes
 
 - **oi-select:** correct works in IE9
-    
+
 ## 0.2.17
 
 #### Features
 
 - **oi-select:** item with empty label equivalent undefined
-    
+
 #### Bug Fixes
 
 - **oiSelectAscSort, oiSelectHighlight:** escape regexp
@@ -55,36 +61,36 @@
 - **oi-select-options:**
     - debounce works correct
     - removeItemFn get item in attribute
-    
+
 - **translate example:** fixed output
 
 ## 0.2.16
-    
+
 #### Bug Fixes
 
 - **animate:** correct work in Angular 1.2.x
 
 ## 0.2.15
-    
+
 #### Features
 
 - **oi-select-options:**
     - saveTrigger: added `tab` value
-    
+
 - **npm:** added commonjs + npm support
-    
+
 #### Breaking Changes
 
 - **oi-select-options:**
     - saveTrigger has new default format: `enter tab blur`
 
 ## 0.2.14
-    
+
 #### Bug Fixes
 
 - **oi-select-options:**
     - newItem = "prompt": fixed items saving
-    
+
 ## 0.2.13
 
 #### Features
@@ -97,7 +103,7 @@
     - saveTrigger provides `space` and any chars (`,`, `;` etc.)
     - removeItemFn removes item if promise was resolved
     - newItemFn allows validate new item. Returns `undefined` or rejqcted promise to prevent adding
-    
+
 #### Bug Fixes
 
 - **oi-select-options:**
@@ -130,7 +136,7 @@
 - **dropdown** open/close by click on empty input; adapted for window resize
 - **examples** correct works on mobile devices
 - **disabled** fixed zero width if no chosen elements in disabled mode
-    
+
 ## 0.2.10
 
 #### Features
@@ -149,7 +155,7 @@
 
 - **oi-options**
     - `$querySelectAs` argument renamed to `$selectedAs`
-    
+
 - **oi-select-options:**
     - newItemFn has new format: `'addItem($query)'` instead of `addItem`
 
@@ -209,7 +215,7 @@
 - **oi-select-options:**
     - closeList (close dropdown list by default after choosing or removing item)
     - listFilter = "none" (add `filter('none', function() { return function(input) { return input; }})`)
-    
+
 #### Bug Fixes
 
 - **input:** fix focus/blur
